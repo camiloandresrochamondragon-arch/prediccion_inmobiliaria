@@ -1,0 +1,154 @@
+/* === Fondo general y fuente === */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0a192f, #112240, #020c1b);
+  color: #e0e0e0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* === Navbar === */
+.navbar {
+  background: rgba(10, 25, 47, 0.95);
+  padding: 15px 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: center; /* Centra el contenido */
+}
+
+.navbar-container {
+  width: 90%;
+  max-width: 1200px; /* Limita el ancho total */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* === Logo === */
+.logo {
+  color: #64ffda;
+  font-weight: 700;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+}
+
+/* === Menú de navegación === */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex: 1;
+}
+
+.nav-link {
+  color: #e0e0e0;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.nav-link:hover {
+  color: #64ffda;
+  transform: scale(1.1);
+}
+
+/* === Contenido principal === */
+.content {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 20px 60px 20px;
+}
+
+/* === Caja de contenido === */
+.intro, .section-box {
+  background: rgba(17, 34, 64, 0.85);
+  border-radius: 20px;
+  padding: 50px 60px;
+  text-align: center;
+  max-width: 900px;
+  width: 90%;
+  box-shadow: 0 0 30px rgba(100, 255, 218, 0.2);
+  backdrop-filter: blur(8px);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* === Títulos === */
+h1, h2 {
+  font-weight: 700;
+  color: #64ffda;
+  text-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* === Párrafos === */
+p {
+  color: #d1d1d1;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* === Footer === */
+footer {
+  background: rgba(10, 25, 47, 0.9);
+  color: #a8b2d1;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 15px;
+  border-top: 1px solid rgba(100, 255, 218, 0.2);
+  margin-top: auto;
+}
+
+/* === Animación de entrada === */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === Scrollbar personalizada === */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #64ffda;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0a192f;
+}
+
+/* === Versión responsiva === */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .intro, .section-box {
+    padding: 30px 20px;
+  }
+
+  h1, h2 {
+    font-size: 1.3rem;
+  }
+}

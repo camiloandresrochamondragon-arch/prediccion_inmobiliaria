@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicción Inmobiliaria en Bogotá</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                🏙️ <strong>Predicción Inmobiliaria en Bogotá</strong>
+            </div>
+            <div class="nav-links">
+                <a href="{{ url_for('index') }}" class="nav-link">Inicio</a>
+                <a href="{{ url_for('objetivos') }}" class="nav-link">Objetivos</a>
+                <a href="{{ url_for('idea') }}" class="nav-link">Idea del Proyecto</a>
+                <a href="{{ url_for('uso') }}" class="nav-link">Cómo Usar</a>
+                <a href="{{ url_for('chatbot') }}" class="nav-link">Chatbot 🤖</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido dinámico -->
+    <main class="content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        © 2025 Universidad de Cundinamarca — Proyecto académico de Ingeniería de Sistemas
+    </footer>
+
+</body>
+</html>
